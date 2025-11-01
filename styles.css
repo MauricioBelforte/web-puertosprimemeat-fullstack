@@ -264,7 +264,7 @@ button:hover,
     background: var(--color-card);
     border-radius: var(--radio-card);
     box-shadow: 0 2px 12px var(--color-card-shadow);
-    padding: 1.2rem 1rem;
+    padding: 1.2rem 1rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -285,7 +285,7 @@ button:hover,
 
 .tarjeta-producto h3,
 .oferta-producto h3 {
-    margin: var(--espaciado-sm) 0 var(--espaciado-xs);
+    margin: var(--espaciado-xs) 0 var(--espaciado-lg);
     font-size: 1.1rem;
     color: var(--color-acento);
     margin-bottom: 0.5rem;
