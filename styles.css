@@ -116,7 +116,7 @@ button:hover,
 /* Barra de navegación */
 .barra-navegacion {
     width: 100%;
-    background: var(--color-primario);
+    background: rgba(0, 0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,7 +148,8 @@ button:hover,
 .logo img {
     width: 8.5rem;
     height: 8.5rem;
-    background-color: #18181800;
+    background-color: var(--color-primario);
+    border-radius: 50%;
 }
 
 .botones-navegacion {
@@ -171,7 +172,7 @@ button:hover,
 /* Hero y Carrusel */
 .seccion-hero {
     /* Fondo: overlay gradient encima de la imagen hero */
-    background: linear-gradient(90deg, rgba(12, 12, 6, 0.55) 60%, rgba(0, 0, 0, 0.25) 100%), url('imagenes/hero.jpeg');
+    background: linear-gradient(90deg, rgba(12, 12, 6, 0.55) 60%, rgba(0, 0, 0, 0.25) 100%), url('imagenes/hero.JPG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -180,6 +181,9 @@ button:hover,
     padding: var(--espaciado-lg) var(--espaciado-sm) var(--espaciado-md) var(--espaciado-sm);
     text-align: center;
     position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .contenedor-hero h2 {
