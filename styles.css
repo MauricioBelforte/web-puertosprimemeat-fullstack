@@ -39,8 +39,8 @@
     /* Espaciados */
     --espaciado-xs: 0.5rem;
     --espaciado-sm: 1rem;
-    --espaciado-md: 2rem;
-    --espaciado-lg: 3rem;
+    --espaciado-md: 2vw;
+    --espaciado-lg: 3vw;
 
     /* Bordes */
     --radio-card: 0.75rem;
