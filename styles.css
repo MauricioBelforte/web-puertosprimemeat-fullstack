@@ -49,9 +49,13 @@
 
 /* Body y estructura */
 body {
-    position: flex;
     font-family: var(--fuente-base);
-    background: var(--color-primario);
+    /* Fondo: overlay gradient encima de la imagen hero */
+    background: linear-gradient(90deg, rgba(12, 12, 6, 0.55) 60%, rgba(0, 0, 0, 0.25) 100%), url('imagenes/hero.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--color-texto-claro);
     line-height: 1.6;
     min-height: 100vh;
@@ -146,9 +150,9 @@ button:hover,
 }
 
 .logo img {
-    width: 8.5rem;
-    height: 8.5rem;
-    background-color: var(--color-primario);
+    width: 10.5rem;
+    height: 10.5rem;
+
     border-radius: 50%;
 }
 
@@ -167,15 +171,12 @@ button:hover,
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
     font-weight: 600;
+
 }
 
 /* Hero y Carrusel */
 .seccion-hero {
-    /* Fondo: overlay gradient encima de la imagen hero */
-    background: linear-gradient(90deg, rgba(12, 12, 6, 0.55) 60%, rgba(0, 0, 0, 0.25) 100%), url('imagenes/hero.JPG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: transparent;
     height: 500px;
     color: var(--color-blanco);
     padding: var(--espaciado-lg) var(--espaciado-sm) var(--espaciado-md) var(--espaciado-sm);
@@ -183,7 +184,6 @@ button:hover,
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
 }
 
 .contenedor-hero h2 {
@@ -246,7 +246,7 @@ button:hover,
 
 /* Cards productos y ofertas */
 .seccion-productos {
-    background: var(--color-primario);
+    background-color: var(--color-primario);
 }
 
 .contenedor-tarjetas,
