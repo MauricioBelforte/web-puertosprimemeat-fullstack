@@ -49,5 +49,24 @@ document.addEventListener('DOMContentLoaded', function () {
             barraNav.classList.remove('barra-fija');
             /*   mainContent.style.paddingTop = '0'; */
         }
+
+        // Animación de aparición en scroll para la sección de presentación
+        const seccionPresentacion = document.querySelector('.seccion-presentacion');
+        if (seccionPresentacion) {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: '0px',
+                threshold: 0.5
+            });
+
+            observer.observe(seccionPresentacion);
+        }
     });
 });
+

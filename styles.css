@@ -10,7 +10,7 @@
 /* Variables de diseño */
 :root {
     /* Colores principales */
-    --color-primario: #0C0C06;
+    --color-primario: #0b0b0c;
     /* Bordó profundo */
     --color-secundario: #F8F6F4;
     /* Fondo claro */
@@ -29,12 +29,15 @@
 
 
     /* Fuentes */
-    --fuente-base: 'Segoe UI', Arial, sans-serif;
+    --fuente-base: 'Roboto', sans-serif;
     --font-size-xs: 0.875rem;
     --font-size-sm: 1rem;
     --font-size-md: 1.25rem;
     --font-size-lg: 1.75rem;
     --font-size-xl: 2.5rem;
+    --font-size-xxl: 3.5rem;
+    --font-size-xxxl: 5rem;
+
 
     /* Espaciados */
     --espaciado-xs: 0.5rem;
@@ -47,6 +50,32 @@
     --shadow-card: 0 2px 8px var(--color-card-shadow);
 }
 
+
+/*
+ <weight>: Use a value from 400 to 700
+ <uniquifier>: Use a unique and descriptive class name
+
+.libre-baskerville-<uniquifier> {
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+  
+} */
+
+
+
+.libre-baskerville {
+    font-family: "Libre Baskerville", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
 .overley {
     background: linear-gradient(rgba(0, 0, 0, 0.888) 100%), url('imagenes/fondo.PNG');
     background-size: cover;
@@ -56,11 +85,12 @@
 
 }
 
+
 /* Body y estructura */
 body {
     font-family: var(--fuente-base);
     /* Fondo: overlay gradient encima de la imagen hero */
-    background: linear-gradient(90deg, rgba(12, 12, 6, 0.55) 60%, rgba(0, 0, 0, 0.25) 100%), url('imagenes/hero.PNG');
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0.25) 100%), url('imagenes/hero.PNG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -186,7 +216,7 @@ button:hover,
 /* Hero y Carrusel */
 .seccion-hero {
     background-color: transparent;
-    height: 500px;
+    /* height: 500px; */
     color: var(--color-blanco);
     padding: var(--espaciado-lg) var(--espaciado-sm) var(--espaciado-md) var(--espaciado-sm);
     text-align: center;
@@ -452,10 +482,10 @@ footer {
 }
 
 
-/* Desktop y tablets */
+/* Desktop */
 @media (min-width: 768px) {
     h1 {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-xxl);
     }
 
     h2 {
@@ -554,6 +584,7 @@ footer {
 }
 
 @media (max-width: 600px) {
+
     .contenedor-redes {
         gap: var(--espaciado-sm);
     }
@@ -561,5 +592,60 @@ footer {
     .icono-red svg {
         width: 32px;
         height: 32px;
+
     }
+
+}
+
+
+
+/* Sección de Presentación */
+
+.seccion-presentacion {
+    padding-top: 300px;
+    padding-bottom: 200px;
+    opacity: 0;
+    transform: translateY(5vw);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.818) 0%,
+            rgba(0, 0, 0, 0.6) 50%,
+            rgba(0, 0, 0, 0.2) 80%,
+            transparent 100%);
+    /*   box-shadow: 0px -60px 65px rgba(0, 0, 0, 0.60); */
+}
+
+
+.seccion-presentacion.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.seccion-presentacion p {
+
+    font-size: var(--font-size-lg);
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+
+.cta-button:hover {
+    background-color: var(--color-card);
+    color: var(--color-primario);
 }
