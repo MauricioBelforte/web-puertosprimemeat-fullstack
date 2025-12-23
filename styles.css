@@ -18,7 +18,7 @@
     /* Rojo intenso */
     --color-negro: #181818;
     /* Negro profundo */
-    --color-card: rgb(239, 195, 85);
+    --color-card: #efc355;
     --color-card-shadow: rgba(171, 171, 171, 0.1);
     --color-gris: #bdbdbd;
     --color-gris-oscuro: #333;
@@ -29,7 +29,7 @@
 
 
     /* Fuentes */
-    --fuente-base: 'Roboto', sans-serif;
+    --fuente-base: 'El Messiri', 'Georgia', sans-serif;
     --font-size-xs: 0.875rem;
     --font-size-sm: 1rem;
     --font-size-md: 1.25rem;
@@ -64,6 +64,12 @@
   
 } */
 
+/* .el-messiri-<uniquifier> {
+  font-family: "El Messiri", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
 
 
 .libre-baskerville {
@@ -73,11 +79,17 @@
     font-style: normal;
 }
 
+.el-messiri {
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 
 
 .overley {
-    background: linear-gradient(rgba(0, 0, 0, 0.888) 100%), url('imagenes/fondo.PNG');
+    background: linear-gradient(rgba(0, 0, 0, 0.947) 100%), url('imagenes/fondo.PNG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,7 +102,9 @@
 body {
     font-family: var(--fuente-base);
     /* Fondo: overlay gradient encima de la imagen hero */
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0.25) 100%), url('imagenes/hero.PNG');
+    background: linear-gradient(180deg, #000000b8 42%, #00000095 84%),
+        url('imagenes/hero.PNG');
+    /* background: linear-gradient(180deg, #000000b8 10%, #00000040 100%), url('imagenes/hero.PNG'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -232,6 +246,7 @@ button:hover,
 }
 
 .contenedor-hero p {
+    font-family: var(--fuente-base);
     font-size: var(--font-size-sm);
     margin-bottom: var(--espaciado-sm);
     color: var(--color-card);
@@ -307,7 +322,7 @@ button:hover,
 
 /* Cards productos y ofertas */
 .seccion-productos {
-    background-color: var(--color-primario);
+    background-color: rgba(0, 0, 0, 0.837);
 }
 
 .contenedor-tarjetas,
@@ -454,6 +469,7 @@ footer {
 .seccion-redes {
     padding: 2rem 1rem;
     text-align: center;
+    background-color: #050504;
 }
 
 .contenedor-redes {
@@ -481,6 +497,13 @@ footer {
     height: 40px;
 }
 
+.seccion-contacto {
+    background-color: #050504;
+
+    /*  padding: var(--espaciado-md) var(--espaciado-lg);
+    text-align: center;
+    color: var(--color-blanco); */
+}
 
 /* Desktop */
 @media (min-width: 768px) {
