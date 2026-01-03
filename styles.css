@@ -31,9 +31,10 @@
     /* Fuentes */
     --fuente-base: 'El Messiri', 'Georgia', sans-serif;
     --fuente-secundaria: 'Libre Baskerville', serif;
-    --font-size-xs: 0.875rem;
-    --font-size-sm: 1rem;
-    --font-size-md: 1.25rem;
+    --font-size-xxs: 0.875rem;
+    --font-size-xs: 1rem;
+    --font-size-sm: 1.25rem;
+    --font-size-md: 1.5rem;
     --font-size-lg: 1.75rem;
     --font-size-xl: 2.5rem;
     --font-size-xxl: 3.5rem;
@@ -45,6 +46,7 @@
     --espaciado-sm: 1rem;
     --espaciado-md: 2vw;
     --espaciado-lg: 3vw;
+    --espaciado-xl: 4vw;
 
     /* Bordes */
     --radio-card: 0.75rem;
@@ -141,7 +143,7 @@ h1 {
 }
 
 h2 {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-md);
     margin-bottom: var(--espaciado-xs);
 }
 
@@ -245,17 +247,17 @@ button:hover,
 }
 
 .contenedor-hero h1 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     margin-bottom: var(--espaciado-xs);
 
-    max-width: 70vw;
+    max-width: 80vw;
     margin-left: auto;
     margin-right: auto;
 }
 
 .contenedor-hero p {
     font-family: var(--fuente-base);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     margin-bottom: var(--espaciado-sm);
     color: var(--color-card);
     max-width: 70vw;
@@ -360,9 +362,9 @@ button:hover,
 
 .seccion-presentacion h2 {
     font-family: 'Libre Baskerville', serif;
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-lg);
 
-    margin-bottom: var(--espaciado-md);
+    margin-bottom: var(--espaciado-xl);
     color: var(--color-card);
 }
 
@@ -579,6 +581,30 @@ footer {
     color: var(--color-blanco); */
 }
 
+
+@media(min-width: 500px) {
+    .seccion-hero {
+        padding: var(--espaciado-lg) var(--espaciado-md) var(--espaciado-lg) var(--espaciado-md);
+    }
+
+    .contenedor-hero h1 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--espaciado-xs);
+
+        max-width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contenedor-hero h2 {
+        font-size: var(--font-size-md);
+    }
+
+    .contenedor-hero p {
+        font-size: var(--font-size-sm);
+    }
+}
+
 /* Desktop */
 @media (min-width: 768px) {
     h1 {
@@ -586,7 +612,7 @@ footer {
     }
 
     h2 {
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-xl);
     }
 
     .barra-navegacion {
