@@ -786,7 +786,7 @@ footer {
 
 }
 
-/* Media query de altura: Reduce el logo en pantallas con poca altura */
+/* Media query de altura: Reduce el logo y fuentes en pantallas con poca altura */
 @media (max-height: 500px) {
     .logo img {
         width: 30vh;
