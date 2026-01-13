@@ -785,3 +785,20 @@ footer {
     }
 
 }
+
+/* Media query de altura: Reduce el logo en pantallas con poca altura */
+@media (max-height: 500px) {
+    .logo img {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .seccion-hero {
+        padding: 2vh var(--espaciado-md) var(--espaciado-lg) var(--espaciado-md);
+    }
+
+    .contenedor-hero h1 {
+        font-size: var(--font-size-xl);
+    }
+
+}
