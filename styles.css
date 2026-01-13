@@ -31,6 +31,7 @@
     /* Fuentes */
     --fuente-base: 'El Messiri', 'Georgia', sans-serif;
     --fuente-secundaria: 'Libre Baskerville', serif;
+    --font-size-xxxs: 0.6rem;
     --font-size-xxs: 0.875rem;
     --font-size-xs: 1rem;
     --font-size-sm: 1.25rem;
@@ -133,6 +134,20 @@ h3 {
     color: var(--color-card);
     font-weight: 700;
 
+}
+
+.texto-adornado {
+    position: absolute;
+    padding: 0 5vw 0vw 5vw;
+    bottom: 1vh;
+    left: 0;
+    width: 100%;
+}
+
+.texto-adornado h3 {
+    font-size: var(--font-size-xxxs);
+    color: #b4a6a6c4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -238,11 +253,12 @@ button:hover,
     background-color: transparent;
     /* height: 500px; */
     color: var(--color-blanco);
-    padding: 10vh var(--espaciado-sm) var(--espaciado-md) var(--espaciado-sm);
+    padding: 5vw var(--espaciado-sm) var(--espaciado-md) var(--espaciado-sm);
     text-align: center;
     position: relative;
     top: 0;
     left: 0;
+    min-height: calc(100vh - 12.5rem);
 
 }
 
@@ -315,7 +331,7 @@ button:hover,
 .posicion-fixed {
     position: fixed;
 
-    bottom: 2%;
+    bottom: 12vh;
     right: 1%;
     z-index: 1000;
     background-color: #2cc748;
@@ -338,7 +354,7 @@ button:hover,
 /* Sección de Presentación */
 
 .seccion-presentacion {
-    padding-top: 20vw;
+    padding-top: 15vh;
     padding-bottom: 10vw;
     background: linear-gradient(to top,
             rgba(0, 0, 0, 0.818) 0%,
@@ -584,7 +600,7 @@ footer {
 
 @media(min-width: 500px) {
     .seccion-hero {
-        padding: 5vh var(--espaciado-md) var(--espaciado-lg) var(--espaciado-md);
+        padding: 5vw var(--espaciado-md) var(--espaciado-lg) var(--espaciado-md);
     }
 
     .contenedor-hero h1 {
@@ -653,6 +669,12 @@ footer {
 
     .contenedor-hero h2 {
         font-size: var(--font-size-lg);
+    }
+
+    .texto-adornado h3 {
+        font-size: var(--font-size-xs);
+        color: #b4a6a6c4;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .contenedor-hero p {
