@@ -265,7 +265,7 @@ button:hover,
     background-color: transparent;
     /* height: 500px; */
     color: var(--color-blanco);
-    padding: 5vw var(--espaciado-sm) var(--espaciado-md) var(--espaciado-sm);
+    padding: 1vw var(--espaciado-sm) var(--espaciado-md) var(--espaciado-sm);
     text-align: center;
     position: relative;
     top: 0;
@@ -297,11 +297,19 @@ button:hover,
     margin-right: auto;
 }
 
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .contenedor-hero .cta-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: max-content;
+    width: 14rem;
+    text-align: center;
+    margin: 0;
 }
 
 .carrusel-imagenes {
@@ -691,6 +699,17 @@ footer {
         font-size: var(--font-size-sm);
     }
 
+    .contenedor-botones {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+ 
+
+
     .seccion-presentacion h2 {
         font-family: 'Libre Baskerville', serif;
         font-size: var(--font-size-lg);
@@ -739,6 +758,8 @@ footer {
     .contenedor-hero h2 {
         font-size: var(--font-size-lg);
     }
+
+
 
     .texto-adornado h3 {
         font-size: var(--font-size-xs);
@@ -875,6 +896,26 @@ footer {
     }
 }
 
+
+
+@media (max-height: 900px) {
+
+    /*     .contenedor-hero h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .contenedor-hero p {
+        font-size: var(--font-size-sm);
+
+    }
+
+    .contenedor-hero .texto-adornado h3 {
+        font-size: var(--font-size-xxs);
+    } */
+
+}
+
+
 /* Media query de altura: Reduce el logo y fuentes en pantallas con poca altura */
 @media (max-height: 500px) {
     .logo img {
@@ -920,4 +961,8 @@ footer {
         margin-top: 10vh;
         padding: 0 1rem;
     }
+
+
+
+
 }
