@@ -149,11 +149,15 @@ h3 {
     animation: fadeInPage 1s ease-out;
 }
 
-.texto-adornado h3 {
+/* Estilos para el lema del hero, semánticamente un párrafo pero con estilo de título */
+.lema-hero {
+    /* Estilos base heredados del h3 original para mantener el diseño */
+    text-transform: uppercase;
+    font-weight: 700;
+    /* Estilos específicos */
     font-size: var(--font-size-xxxs);
     color: #f7f3f3c4;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-
 }
 
 .texto-adornado.fade-out {
@@ -287,7 +291,7 @@ button:hover,
     margin-right: auto;
 }
 
-.contenedor-hero p {
+.contenedor-hero>p {
     font-family: var(--fuente-base);
     font-size: var(--font-size-xs);
     margin-bottom: 5vh;
@@ -683,7 +687,7 @@ footer {
     }
 
     .contenedor-hero h1 {
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-xl);
         margin-bottom: var(--espaciado-xs);
 
         max-width: 70vw;
@@ -695,7 +699,7 @@ footer {
         font-size: var(--font-size-lg);
     }
 
-    .contenedor-hero p {
+    .contenedor-hero>p {
         font-size: var(--font-size-sm);
     }
 
@@ -707,7 +711,7 @@ footer {
 
     }
 
- 
+
 
 
     .seccion-presentacion h2 {
@@ -761,14 +765,12 @@ footer {
 
 
 
-    .texto-adornado h3 {
+    .lema-hero {
         font-size: var(--font-size-xs);
-
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
-    .contenedor-hero p {
-        font-size: var(--font-size-md);
+    .contenedor-hero>p {
+        font-size: var(--font-size-sm);
     }
 
     .seccion-presentacion h2 {
@@ -828,16 +830,20 @@ footer {
 @media (min-width: 900px) {
 
     .seccion-hero {
-        padding: var(--espaciado-lg) var(--espaciado-md) var(--espaciado-lg) var(--espaciado-md);
+        padding: var(--espaciado-xs) var(--espaciado-md) var(--espaciado-lg) var(--espaciado-md);
     }
 
     .contenedor-hero h1 {
-        font-size: var(--font-size-xxl);
+        font-size: var(--font-size-xl);
         margin-bottom: var(--espaciado-xs);
 
         max-width: 70vw;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .contenedor-hero>p {
+        font-size: var(--font-size-sm);
     }
 
     .contenedor-tarjetas,
@@ -854,6 +860,22 @@ footer {
 }
 
 @media (min-width: 1200px) {
+    .seccion-hero {
+        padding: var(--espaciado-lg) var(--espaciado-md) var(--espaciado-lg) var(--espaciado-md);
+    }
+
+    .contenedor-hero h1 {
+        font-size: var(--font-size-xxl);
+        margin-bottom: var(--espaciado-xs);
+
+        max-width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contenedor-hero>p {
+        font-size: var(--font-size-md);
+    }
 
     .contenedor-tarjetas,
     .contenedor-ofertas {
@@ -935,11 +957,11 @@ footer {
         font-size: var(--font-size-md);
     }
 
-    .contenedor-hero h3 {
+    .contenedor-hero .lema-hero {
         font-size: var(--font-size-xxxs);
     }
 
-    .contenedor-hero p {
+    .contenedor-hero>p {
         font-size: var(--font-size-xs);
     }
 
