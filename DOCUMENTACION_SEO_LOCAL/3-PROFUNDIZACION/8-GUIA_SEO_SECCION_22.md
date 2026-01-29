@@ -1,6 +1,6 @@
-# Guía Rápida de SEO Técnico para Desarrolladores
+# Guía Rápida de SEO Técnico - Puertos Prime Meat
 
-Esta guía está pensada para que tengas siempre a mano los conceptos clave del SEO técnico. Aquí aprenderás de forma sencilla cómo configurar tu web para que Google y las redes sociales la entiendan perfectamente.
+Esta guía está pensada para que tengas siempre a mano los conceptos clave del SEO técnico aplicados a tu negocio de venta de carnes premium. Aquí aprenderás de forma sencilla cómo configurar tu web para que Google, tus clientes y las redes sociales la entiendan perfectamente.
 
 ---
 
@@ -9,7 +9,7 @@ Esta guía está pensada para que tengas siempre a mano los conceptos clave del 
 Antes de escribir una sola línea de contenido, la estructura de tu página debe tener sentido. El HTML semántico utiliza etiquetas que describen su propio significado tanto para el navegador como para el desarrollador y, lo más importante, para Google. No es lo mismo usar un `<div>` que usar un `<header>`.
 
 **¿Por qué es crucial para el SEO?**
-Google utiliza estas etiquetas para entender la estructura y el propósito de cada parte de tu página. Un `<nav>` contiene la navegación principal, un `<main>` el contenido central, y un `<footer>` el pie de página. Usar estas etiquetas correctamente (`<header>`, `<footer>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`) le da a Google un mapa claro de tu sitio, mejorando su capacidad para indexarlo correctamente.
+Google utiliza estas etiquetas para entender la estructura y el propósito de cada parte de tu página. Un `<nav>` contiene la navegación principal (Inicio, Productos, Contacto), un `<main>` el catálogo de carnes y contenido central, y un `<footer>` la información de contacto y redes sociales. Usar estas etiquetas correctamente (`<header>`, `<footer>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`) le da a Google un mapa claro de tu tienda online, mejorando su capacidad para indexarla correctamente.
 
 **Ejemplo:**
 
@@ -47,42 +47,45 @@ Una vez que la estructura es semántica, la jerarquía del contenido debe ser l�
 
 ```html
 <!-- Texto para Google (Oculto visualmente) -->
-<h1 class="visually-hidden">Estudio Jurídico Launes & Asociados - Abogados en Argentina y Uruguay</h1>
+<h1 class="visually-hidden">Puertos Prime Meat - Carne Premium de Exportación Cuota 481</h1>
 
 <!-- Imagen para el Usuario (Visible) -->
 <div class="titulo-principal">
-    <svg>...</svg> <!-- O tu etiqueta <img> -->
+    <img src="imagenes/logo.jpeg" alt="Logo Puertos Prime Meat" />
 </div>
 ```
 ---
 
 ## 3. Meta Etiquetas Esenciales: El ADN de tu página
 
-Antes de dar órdenes a los robots, debemos definir la identidad de nuestra página. Estas etiquetas van en el `<head>` y son la primera impresión que Google y los usuarios tienen de tu sitio.
+Antes de dar órdenes a los robots, debemos definir la identidad de nuestra tienda online. Estas etiquetas van en el `<head>` y son la primera impresión que Google y tus clientes potenciales tienen de tu negocio de carnes premium.
 
 *   **Title:** `<title>Título de la Página</title>`
     *   Es el texto que aparece en la pestaña del navegador y el título principal (en azul) en los resultados de Google. Es el factor SEO más importante en la página. Debe ser descriptivo y único.
+    *   **Ejemplo:** "Puertos Prime Meat | Carne Premium de Exportación (Cuota 481)"
 
 *   **Description:** `<meta name="description" content="...">`
-    *   Es el resumen (aprox. 160 caracteres) que aparece en los resultados de Google bajo el título. No afecta directamente el ranking, pero es vital para convencer al usuario de hacer clic.
+    *   Es el resumen (aprox. 160 caracteres) que aparece en los resultados de Google bajo el título. No afecta directamente el ranking, pero es vital para convencer al cliente de hacer clic.
+    *   **Ejemplo:** "Puertos Prime Meat te acerca carne de calidad exportación (Cuota 481). Cortes seleccionados con trazabilidad, sabor y terneza superior."
 
 *   **Keywords:** `<meta name="keywords" content="...">`
-    *   Lista de palabras clave separadas por comas. Aunque Google le da menos importancia que antes, sigue siendo útil para organizar los temas de la página.
+    *   Lista de palabras clave separadas por comas relevantes a tu negocio. Aunque Google le da menos importancia que antes, sigue siendo útil para organizar los temas de la página.
+    *   **Ejemplo:** "carne cuota 481, cortes de carne premium, asado de tira, ojo de bife, carnicería en Puertos, carne de exportación"
 
 *   **Author:** `<meta name="author" content="...">`
-    *   Indica quién creó la página (persona o empresa). Aporta transparencia.
+    *   Indica quién creó la página (persona o empresa). En tu caso: "Puertos Prime Meat".
 
 *   **Viewport:** `<meta name="viewport" content="width=device-width, initial-scale=1">`
-    *   Indispensable para que el sitio sea "Responsive" y se adapte correctamente a dispositivos móviles.
+    *   Indispensable para que tu tienda online sea "Responsive" y se adapte correctamente a dispositivos móviles (donde compran tus clientes).
 
 ---
 
 ## 4. Robots y Flujo de Trabajo: Indicando el Camino a Google
 
-Ahora que la página tiene su identidad, le diremos a los "robots" (o arañas) de los buscadores cómo deben comportarse. Esto es crucial para evitar que Google indexe versiones de prueba.
+Ahora que la página tiene su identidad como tienda de carnes premium, le diremos a los "robots" (o arañas) de los buscadores cómo deben comportarse. Esto es crucial para evitar que Google indexe versiones de prueba o desarrollo.
 
 ### A. El archivo `robots.txt` (El Portero del Edificio)
-**Ubicación:** En la raíz del sitio (ej: `tusitio.com/robots.txt`).
+**Ubicación:** En la raíz del sitio (ej: `puertosprimemeat.ar/robots.txt`).
 **Función:** Da órdenes generales a los robots. Decide quién entra al sitio y a qué carpetas tiene prohibido pasar.
 
 **Ejemplo:**
@@ -100,7 +103,7 @@ Sitemap: https://puertosprimemeat.ar/sitemap.xml
 
 **Flujo de Trabajo Correcto (Método GitHub):**
 
-Para facilitar el cambio entre el entorno de desarrollo (GitHub) y el de producción (hosting oficial), dejaremos ambas etiquetas en el código. La que no se usa, quedará comentada.
+Para facilitar el cambio entre el entorno de desarrollo (GitHub) y el de producción (tu dominio puertosprimemeat.ar), dejaremos ambas etiquetas en el código. La que no se usa, quedará comentada.
 
 **Por defecto (para desarrollo en GitHub):**
 Deja activa la etiqueta `noindex` para bloquear a Google.
@@ -114,8 +117,8 @@ Deja activa la etiqueta `noindex` para bloquear a Google.
 *   **noindex:** "No muestres esta página en los resultados de Google".
 *   **nofollow:** "No sigas los enlaces de esta página".
 
-**Paso 2: En Producción (Hosting Oficial)**
-Cuando subas la web a tu dominio final, permite la entrada a Google para que la posicione.
+**Paso 2: En Producción (Hosting Oficial - puertosprimemeat.ar)**
+Cuando subas la web a tu dominio final, permite la entrada a Google para que la posicione y tus clientes potenciales puedan encontrarte.
 ```html
 <!-- Desplegada en Hosting Oficial -->
 <meta name="robots" content="index, follow">
@@ -123,27 +126,34 @@ Cuando subas la web a tu dominio final, permite la entrada a Google para que la 
 *   **index:** "Guarda esta página en tu índice para mostrarla en búsquedas".
 *   **follow:** "Sigue los enlaces que hay aquí para descubrir otras páginas".
 
-**Importante:** Las otras etiquetas como `canonical` y `og:url` siempre deben apuntar al dominio de producción final, incluso cuando estás en desarrollo. El `noindex` evitará cualquier problema.
+**Importante:** Las otras etiquetas como `canonical` y `og:url` siempre deben apuntar al dominio de producción final (puertosprimemeat.ar), incluso cuando estás en desarrollo. El `noindex` evitará cualquier problema.
 
 ---
 
 ## 5. Sitemap.xml (El Mapa Turístico)
 
-**Ubicación:** Generalmente en la raíz (`tusitio.com/sitemap.xml`).
-**Función:** Es una lista en formato XML de todas las páginas que quieres que Google encuentre.
+**Ubicación:** Generalmente en la raíz (`puertosprimemeat.ar/sitemap.xml`).
+**Función:** Es una lista en formato XML de todas las páginas que quieres que Google encuentre (página principal, galería de productos, página de contacto, etc.).
 
 **¿Por qué es necesario?**
-A veces los robots no encuentran todas las páginas si no están bien enlazadas entre sí. El Sitemap es como entregarles un mapa turístico para asegurarse de que visiten todos los puntos de interés, incluso los más escondidos.
+A veces los robots no encuentran todas las páginas si no están bien enlazadas entre sí. El Sitemap es como entregarles un mapa turístico para asegurarse de que visiten todas tus secciones, incluso las más escondidas.
 
 **Ejemplo:**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://estudiolaunes.com.ar/</loc>
-      <lastmod>2024-05-16</lastmod> <!-- Fecha de última modificación -->
+      <loc>https://puertosprimemeat.ar/</loc>
+      <lastmod>2026-01-29</lastmod> <!-- Fecha de última modificación -->
    </url>
-   <!-- Aquí irían otras páginas internas si las tuvieras -->
+   <url>
+      <loc>https://puertosprimemeat.ar/productos.html</loc>
+      <lastmod>2026-01-15</lastmod>
+   </url>
+   <url>
+      <loc>https://puertosprimemeat.ar/contacto.html</loc>
+      <lastmod>2026-01-10</lastmod>
+   </url>
 </urlset>
 ```
 *   **Tip:** Existen generadores online (como xml-sitemaps.com) que crean este archivo automáticamente.
@@ -156,15 +166,15 @@ A veces los robots no encuentran todas las páginas si no están bien enlazadas 
 **Función:** Evita penalizaciones por **contenido duplicado**.
 
 Para Google, estas son páginas distintas:
-1. `estudiolaunes.com.ar`
-2. `www.estudiolaunes.com.ar`
-3. `www.estudiolaunes.com.ar/index.html`
+1. `puertosprimemeat.ar`
+2. `www.puertosprimemeat.ar`
+3. `www.puertosprimemeat.ar/index.html`
 
-Si Google ve tres páginas idénticas, divide la reputación entre las tres. La etiqueta `canonical` le dice cuál es la versión oficial.
+Si Google ve tres páginas idénticas, divide la reputación entre las tres. La etiqueta `canonical` le dice cuál es la versión oficial de tu tienda de carnes premium.
 
 **Ejemplo:**
 ```html
-<link rel="canonical" href="https://estudiolaunes.com.ar/">
+<link rel="canonical" href="https://puertosprimemeat.ar/">
 ```
 **Traducción:** "Google, no importa por cuál de las variantes hayas entrado, la URL que debes posicionar y a la que debes sumar la reputación es esta".
 
@@ -173,20 +183,22 @@ Si Google ve tres páginas idénticas, divide la reputación entre las tres. La 
 ## 7. Open Graph (Redes Sociales)
 
 **Ubicación:** En el `<head>` del HTML.
-**Función:** Son la "tarjeta de presentación" de tu web en redes sociales.
+**Función:** Son la "tarjeta de presentación" de tu tienda en redes sociales como WhatsApp, Facebook e Instagram.
 
-Cuando compartes un link en WhatsApp, Facebook o LinkedIn, estas plataformas buscan estas etiquetas para armar la vista previa con imagen y texto.
+Cuando compartes un link de tu web en WhatsApp, Facebook o LinkedIn, estas plataformas buscan estas etiquetas para armar la vista previa con imagen y texto. Es fundamental para convencer a tus clientes potenciales de visitar tu página.
 
 **Ejemplo:**
 ```html
 <meta property="og:type" content="website">
-<meta property="og:title" content="Estudio Jurídico | Launes & Asociados">
-<meta property="og:description" content="Asesoramiento legal integral...">
-<meta property="og:image" content="https://www.estudiolaunes.com.ar/imagenes/logoyletras.png">
+<meta property="og:title" content="Puertos Prime Meat | Carne Premium de Exportación (Cuota 481)">
+<meta property="og:description" content="Descubrí carne de calidad exportación (Cuota 481) con trazabilidad, sabor y terneza superior para tu asado gourmet.">
+<meta property="og:image" content="https://www.puertosprimemeat.ar/imagenes/logo.jpeg">
+<meta property="og:url" content="https://puertosprimemeat.ar/">
 ```
-*   **og:title:** El título en negrita de la tarjeta.
-*   **og:description:** El texto descriptivo debajo.
-*   **og:image:** La imagen que se muestra (Crucial para llamar la atención).
+*   **og:title:** El título en negrita de la tarjeta (debe ser atractivo).
+*   **og:description:** El texto descriptivo debajo (invita a los usuarios a conocer tus carnes premium).
+*   **og:image:** La imagen que se muestra (Crucial para llamar la atención en redes sociales).
+*   **og:url:** La URL de destino.
 
 ---
 
@@ -196,10 +208,10 @@ Aunque Twitter puede leer las etiquetas Open Graph, tiene sus propias etiquetas 
 
 **Ejemplo:**
 ```html
-<meta property="twitter:card" content="summary_large_image"> <!-- Tarjeta con imagen grande -->
-<meta property="twitter:title" content="Estudio Jurídico | Launes & Asociados">
-<meta property="twitter:description" content="Asesoramiento legal integral...">
-<meta property="twitter:image" content="https://www.estudiolaunes.com.ar/imagenes/logoyletras.png">
+<meta name="twitter:card" content="summary_large_image"> <!-- Tarjeta con imagen grande -->
+<meta name="twitter:title" content="Puertos Prime Meat | Carne Premium de Exportación (Cuota 481)">
+<meta name="twitter:description" content="Descubrí carne de calidad exportación (Cuota 481) con trazabilidad y sabor superior.">
+<meta name="twitter:image" content="https://www.puertosprimemeat.ar/imagenes/logo.jpeg">
 ```
 
 ---
@@ -209,11 +221,12 @@ Aunque Twitter puede leer las etiquetas Open Graph, tiene sus propias etiquetas 
 **Ubicación:** En la etiqueta `<img>`.
 **Función:** Describe el contenido de la imagen para Google y usuarios con lectores de pantalla.
 
-Google no puede "ver" las imágenes como un humano, por lo que necesita el texto alternativo para entender su contenido. Además, es crucial para la accesibilidad web.
+Google no puede "ver" las imágenes como un humano, por lo que necesita el texto alternativo para entender su contenido. Además, es crucial para la accesibilidad web. En una tienda de carnes, el atributo alt de tus cortes es especialmente importante.
 
 **Ejemplo:**
 ```html
-<a href="https://www.instagram.com/estudiolaunes" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
+<img src="imagenes/asado-tira.jpg" alt="Asado de tira de primera calidad, corte premium cuota 481" width="400" height="300">
+<a href="https://www.instagram.com/puertosprimemeat" target="_blank" aria-label="Instagram Puertos Prime Meat"><img src="imagenes/instagram-icon.png" alt="Instagram"></a>
 ```
 
 ---
@@ -224,21 +237,23 @@ Google no solo se fija en el contenido, sino también en la **experiencia del us
 
 ### A. Datos Estructurados (Schema.org) - El DNI de tu negocio
 
-**Función:** Es un código (normalmente JSON-LD) que le explica a Google de qué trata tu negocio de forma estructurada. No es solo texto, es un "Servicio Legal" con dirección, teléfono, etc. Esto es **crucial** para el SEO local y para aparecer en fichas de negocio enriquecidas.
+**Función:** Es un código (normalmente JSON-LD) que le explica a Google de qué trata tu negocio de forma estructurada. No es solo texto, es una "Carnicería" o "Tienda de Alimentos" con dirección, teléfono, horarios, etc. Esto es **crucial** para el SEO local y para aparecer en fichas de negocio enriquecidas, especialmente importante para un negocio de venta de carnes.
 
 **Ubicación:** En el `<head>` del HTML, dentro de una etiqueta `<script type="application/ld+json">`.
 
-**Ejemplo (para un estudio jurídico):**
+**Ejemplo (para una carnicería de carnes premium):**
 ```html
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Estudio Jurídico Launes & Asociados",
-  "image": "https://estudiolaunes.com.ar/imagenes/logoyletras.png",
-  "url": "https://estudiolaunes.com.ar/",
-  "telephone": "+54 9 11 2450-2746",
-  "description": "Asesoramiento legal integral a empresas y particulares en Argentina y Uruguay."
+  "@type": "ButcherShop",
+  "name": "Puertos Prime Meat",
+  "image": "https://puertosprimemeat.ar/imagenes/logo.jpeg",
+  "url": "https://puertosprimemeat.ar/",
+  "telephone": "+5493484568338",
+  "description": "Puertos Prime Meat te acerca carne de calidad exportación (Cuota 481). Cortes seleccionados con trazabilidad, sabor y terneza superior.",
+  "priceRange": "$$$",
+  "areaServed": "Puertos del Lago, Escobar"
 }
 </script>
 ```
@@ -250,7 +265,7 @@ Google no solo se fija en el contenido, sino también en la **experiencia del us
 **La Solución:** Siempre especifica el ancho (`width`) y alto (`height`) de tus imágenes en el HTML. El navegador reservará ese espacio y evitará que el diseño "salte".
 
 ```html
-<img src="imagenes/logo.png" alt="Logo del Estudio" width="50" height="50">
+<img src="imagenes/logo.png" alt="Logo de Puertos Prime Meat" width="50" height="50">
 ```
 
 ### C. Carga Rápida de Imágenes (Lazy Loading)
@@ -295,7 +310,7 @@ Un enlace que solo contiene un ícono de Instagram es invisible para Google.
 ```html
 <!-- Google y los lectores de pantalla no saben qué es esto -->
 <a href="https://www.instagram.com/puertosprimemeat" target="_blank">
-    <svg>...</svg>
+    <img src="imagenes/instagram.png" alt="Instagram">
 </a>
 ```
 
@@ -303,7 +318,7 @@ Un enlace que solo contiene un ícono de Instagram es invisible para Google.
 ```html
 <!-- Ahora Google y los lectores de pantalla entienden que este enlace lleva a Instagram -->
 <a href="https://www.instagram.com/puertosprimemeat" target="_blank" aria-label="Instagram de Puertos Prime Meat">
-    <svg>...</svg>
+    <img src="imagenes/instagram.png" alt="Instagram">
 </a>
 ```
 
@@ -321,14 +336,14 @@ Google utiliza la URL como parte de su análisis. Si la URL contiene palabras cl
 
 **Mal (confuso):**
 ```
-https://estudiolaunes.com.ar/pagina.php?id=123&cat=servicios
-https://estudiolaunes.com.ar/index.php?p=derecho-civil
+https://puertosprimemeat.ar/pagina.php?id=123&cat=productos
+https://puertosprimemeat.ar/index.php?p=asado-de-tira
 ```
 
 **Bien (descriptivo y limpio):**
 ```
-https://estudiolaunes.com.ar/servicios/derecho-civil/
-https://estudiolaunes.com.ar/blog/como-redactar-un-testamento/
+https://puertosprimemeat.ar/productos/asado-de-tira/
+https://puertosprimemeat.ar/blog/como-elegir-el-mejor-corte/
 ```
 
 **Reglas de oro:**
@@ -351,8 +366,8 @@ De nada sirve tener un contenido perfecto si nadie lo busca. Google necesita ent
 
 **¿Cómo hacerlo?**
 
-1. **Identifica tu palabra clave principal:** La más importante para la página (ej: "abogado de derecho laboral en Buenos Aires")
-2. **Agrupa palabras relacionadas (LSI keywords):** Variaciones naturales (ej: "abogado laboral", "asesor derecho del trabajo")
+1. **Identifica tu palabra clave principal:** La más importante para la página (ej: "carne premium cuota 481 en Puertos del Lago")
+2. **Agrupa palabras relacionadas (LSI keywords):** Variaciones naturales (ej: "cortes de carne cuota 481", "asado premium", "carnes de exportación")
 3. **Densidad natural:** No repitas obsesivamente. Usa entre 1-2% del total de palabras. Si tu artículo tiene 1000 palabras, menciona la palabra clave 10-20 veces de forma natural.
 4. **Ubicación estratégica:**
    - `<h1>` (título principal)
@@ -362,14 +377,14 @@ De nada sirve tener un contenido perfecto si nadie lo busca. Google necesita ent
    - URL y nombre del archivo
 
 **Ejemplo:**
-Si tu palabra clave es "asesoría legal empresarial", úsala así:
+Si tu palabra clave es "carne premium cuota 481", úsala así:
 
 ```html
-<title>Asesoría Legal Empresarial | Launes & Asociados</title>
-<meta name="description" content="Asesoría legal empresarial integral para PYMES y grandes empresas en Argentina">
-<h1>Asesoría Legal Empresarial para tu Empresa</h1>
-<h2>¿Qué incluye nuestro servicio de asesoría legal?</h2>
-<p>Nuestro equipo de abogados especializados en asesoría legal empresarial...</p>
+<title>Carne Premium Cuota 481 | Puertos Prime Meat</title>
+<meta name="description" content="Carne premium cuota 481 con trazabilidad y sabor superior. Cortes seleccionados para tu asado gourmet en Puertos del Lago.">
+<h1>Carne Premium Cuota 481 - Calidad Exportación</h1>
+<h2>¿Qué incluye nuestro catálogo de carne premium?</h2>
+<p>Puertos Prime Meat ofrece cortes especiales de carne cuota 481 con origen controlado y trazabilidad...</p>
 ```
 
 **Herramientas útiles:** Google Keyword Planner (gratis), Ubersuggest, SEMrush, Ahrefs.
@@ -398,8 +413,8 @@ Un site bien enlazado internamente mejora significativamente el SEO.
 
 **Bien (con enlace interno estratégico):**
 ```html
-<p>Nuestro equipo está formado por <a href="/equipo/">abogados especializados en derecho laboral</a>. 
-<a href="/contacto/">Contáctanos hoy</a> para una consulta gratuita.</p>
+<p>Nuestros <a href="/productos/">cortes especiales de carne cuota 481</a> garantizan calidad y sabor. 
+<a href="/contacto/">Contáctanos hoy</a> para hacer tu pedido o conocer más sobre nuestros productos.</p>
 ```
 
 **Reglas de oro:**
@@ -494,28 +509,29 @@ Google ha mejorado enormemente su capacidad para detectar contenido de calidad. 
 1. **Longitud:** Para artículos importantes, 1000+ palabras es ideal. Para landing pages, 500+ palabras mínimo.
 2. **Originalidad:** Nada de copiar contenido. Google lo detecta.
 3. **Profundidad:** No hagas respuestas superficiales. Explora el tema a fondo.
-4. **Actualización:** Mantén el contenido actualizado. Un artículo de 2020 sobre leyes que cambiaron pierde valor.
-5. **Autoridad:** Cita fuentes, incluye datos, referencias legales. Eso te hace más creíble.
+4. **Actualización:** Mantén el contenido actualizado. Un artículo sobre las propiedades de un corte de carne que cambió pierde valor.
+5. **Autoridad:** Cita fuentes, incluye datos, certificaciones de calidad. Eso te hace más creíble.
 
 **Ejemplo:**
 
 **Malo (superficial):**
 ```
-El derecho laboral es importante. Los empleados tienen derechos. 
-Las empresas tienen obligaciones. Contáctenos para más información.
+Vendemos carne de buena calidad. Nuestros cortes son frescos. 
+Tenemos buenos precios. Contáctenos para pedidos.
 ```
 
 **Bueno (profundo y útil):**
 ```
-El derecho laboral en Argentina está regulado por la Ley de Contrato de Trabajo 20.744. 
-Esto significa que:
+Nuestros cortes de carne premium pertenecen a la Cuota 481, lo que significa que cumplen 
+con los más altos estándares de calidad y trazabilidad para exportación. Cada corte que ofrecemos incluye:
 
-1. El empleador debe proporcionar un ambiente seguro (Art. 75)
-2. El trabajador tiene derecho a vacaciones pagas (Art. 150)
-3. La jornada máxima es de 8 horas diarias (Art. 196)
+1. Trazabilidad completa desde el origen del animal
+2. Almacenamiento en cámara frigorífica a -18°C
+3. Empaque al vacío para máxima conservación
+4. Certificación de calidad exportación
 
-Además, según el último fallo de la Cámara Nacional de Apelaciones del Trabajo 
-en 2024, las empresas deben... [continúa con información específica y útil]
+Además, nuestros cortes seleccionados como el asado de tira, ojo de bife y entraña 
+son elegidos por su marmóleo superior y terneza garantizada para paladares exigentes...
 ```
 
 ---
@@ -541,17 +557,17 @@ Muestran la ruta de navegación del usuario. Útil para sitios con estructura pr
     "@type": "ListItem",
     "position": 1,
     "name": "Home",
-    "item": "https://estudiolaunes.com.ar"
+    "item": "https://puertosprimemeat.ar"
   },{
     "@type": "ListItem",
     "position": 2,
-    "name": "Servicios",
-    "item": "https://estudiolaunes.com.ar/servicios"
+    "name": "Productos",
+    "item": "https://puertosprimemeat.ar/productos"
   },{
     "@type": "ListItem",
     "position": 3,
-    "name": "Derecho Civil",
-    "item": "https://estudiolaunes.com.ar/servicios/derecho-civil"
+    "name": "Asado de Tira",
+    "item": "https://puertosprimemeat.ar/productos/asado-de-tira"
   }]
 }
 </script>
@@ -562,8 +578,8 @@ También puedes mostrar visualmente estos breadcrumbs en el HTML:
 <nav aria-label="breadcrumb">
   <ol>
     <li><a href="/">Home</a></li>
-    <li><a href="/servicios">Servicios</a></li>
-    <li><a href="/servicios/derecho-civil">Derecho Civil</a></li>
+    <li><a href="/productos">Productos</a></li>
+    <li><a href="/productos/asado-de-tira">Asado de Tira</a></li>
   </ol>
 </nav>
 ```
@@ -717,3 +733,175 @@ Para artículos largos (1500+ palabras), agrega una tabla de contenidos al inici
 ```
 
 Esto mejora tanto la UX como el SEO.
+
+---
+
+## 22. SEO Local: Posicionamiento Geográfico (NUEVO)
+
+**Ubicación:** En meta tags, headings, contenido y Schema.org
+**Función:** Hacer que Google entienda en qué zonas geográficas operás y ayudarte a rankear en búsquedas locales.
+
+**¿Por qué es crucial para Puertos Prime Meat?**
+La mayoría de tus clientes buscarán "carne premium cerca de mí" o "carne cuota 481 en Escobar". El SEO local te posiciona exactamente para esas búsquedas.
+
+### A. Zonas de Cobertura de Puertos Prime Meat
+
+**Zonas Principales:**
+- Belén de Escobar (Cabecera del Partido)
+- Puertos (Ciudad-Pueblo privada, 1.400 hectáreas)
+- Ingeniero Maschwitz
+
+**Barrios Internos de Puertos:**
+Araucarias, Acacias, Vistas, Riberas, Muelles, Nativas, Orillas, Ceibos, Marinas, Amarras.
+
+**Emprendimientos Independientes:**
+San Matías (1.300 lotes), El Cantón (con cancha de golf), El Naudí (especializado náutico), El Cazador (barrio parque tradicional).
+
+### B. Dónde Colocar la Información Geográfica
+
+**1. Meta Description (CRÍTICO):**
+```html
+<meta name="description"
+    content="Puertos Prime Meat - Carne premium cuota 481 en Belén de Escobar (cabecera), Puertos (Ciudad-Pueblo: Araucarias, Acacias, Vistas, Riberas, Muelles, Nativas, Orillas, Ceibos, Marinas, Amarras), Ingeniero Maschwitz, San Matías, El Cantón, El Naudí, El Cazador. Cortes selectos con trazabilidad.">
+```
+
+**2. Meta Keywords (IMPORTANTE):**
+Incluye el nombre de cada zona con palabras clave:
+```html
+<meta name="keywords"
+    content="carne cuota 481 Escobar, carnicería premium Belén de Escobar, carne premium Puertos (Ciudad-Pueblo), carne Araucarias, carne Acacias, carne Vistas, carne Puertos del Lago, cortes carne Maschwitz, carne San Matías, carne El Cantón, carne El Naudí, carne El Cazador, asado de tira Escobar, ojo de bife Escobar, vacío Escobar, entraña cuota 481, carne de exportación Escobar, carnicería Escobar, carne envasada al vacío, asado gourmet">
+```
+
+**3. Title de la Página (CRÍTICO):**
+```html
+<title>Puertos Prime Meat | Carne Premium Cuota 481 en Escobar</title>
+```
+
+**4. H1 y Headings (IMPORTANTE):**
+```html
+<h1>Puertos Prime Meat - Carne Premium en Escobar</h1>
+<h2>Carne Cuota 481 en Belén de Escobar, Puertos, Maschwitz y Zona Norte</h2>
+```
+
+**5. Contenido Textual (IMPORTANTE):**
+Menciona explícitamente las zonas en tu contenido:
+```html
+<p>Puertos Prime Meat atiende en Belén de Escobar (cabecera del Partido), Puertos 
+(Ciudad-Pueblo privada con barrios: Araucarias, Acacias, Vistas, Riberas, Muelles, 
+Nativas, Orillas, Ceibos, Marinas, Amarras), Ingeniero Maschwitz (hub gastronómico), 
+San Matías, El Cantón, El Naudí y El Cazador. Carne premium cuota 481 con trazabilidad 
+garantizada para todo Escobar y zona norte.</p>
+```
+
+**6. Schema.org - Datos Estructurados (MUY IMPORTANTE):**
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ButcherShop",
+  "name": "Puertos Prime Meat",
+  "description": "Carne premium cuota 481 - Belén de Escobar, Puertos (Ciudad-Pueblo), Maschwitz y zona norte",
+  "url": "https://puertosprimemeat.ar/",
+  "telephone": "+5493484568338",
+  "areaServed": [
+    "Belén de Escobar",
+    "Araucarias",
+    "Acacias",
+    "Vistas",
+    "Riberas",
+    "Muelles",
+    "Nativas",
+    "Orillas",
+    "Ceibos",
+    "Marinas",
+    "Amarras",
+    "Ingeniero Maschwitz",
+    "San Matías",
+    "El Cantón",
+    "El Naudí",
+    "El Cazador",
+    "Escobar",
+    "Buenos Aires"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Puertos del Lago",
+    "addressLocality": "Escobar",
+    "addressRegion": "Buenos Aires",
+    "postalCode": "1625",
+    "addressCountry": "AR"
+  }
+}
+</script>
+```
+
+**7. Open Graph para Redes Sociales:**
+```html
+<meta property="og:title" content="Puertos Prime Meat | Carne Premium en Belén de Escobar y Puertos del Lago">
+<meta property="og:description" content="Carne premium cuota 481 entregada en Escobar y zona norte. Cortes selectos para tu asado gourmet.">
+```
+
+### C. Estructura Recomendada de tu Página
+
+```html
+<!-- HEAD (Meta tags con ubicación) -->
+<meta name="description" content="...Escobar...">
+<meta name="keywords" content="...carne Escobar...">
+<title>Puertos Prime Meat | Carne en Escobar</title>
+
+<!-- BODY -->
+<h1>Puertos Prime Meat - Carne Premium en Escobar</h1>
+
+<section id="sobre-nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Operamos en Belén de Escobar, Puertos del Lago, Ingeniero Maschwitz y barrios...</p>
+</section>
+
+<section id="productos">
+    <h2>Cortes Premium en Escobar</h2>
+    <!-- Tus productos -->
+</section>
+
+<section id="zonas">
+    <h2>Zonas de Cobertura en la Zona Norte</h2>
+    <ul>
+        <li>Belén de Escobar</li>
+        <li>Puertos del Lago</li>
+        <li>Ingeniero Maschwitz</li>
+        <!-- ... más zonas ... -->
+    </ul>
+</section>
+
+<section id="contacto">
+    <h2>Contactanos en Escobar</h2>
+    <p>Puertos Prime Meat atiende en Escobar y alrededores.</p>
+</section>
+```
+
+### D. Estrategia Futura: Páginas por Zona
+
+Para máximo SEO local, crea páginas dedicadas a cada zona:
+
+```
+puertosprimemeat.ar/ (Página principal - todas las zonas)
+puertosprimemeat.ar/zonas/belen-de-escobar/ (Solo BE)
+puertosprimemeat.ar/zonas/puertos-del-lago/ (Solo PDL)
+puertosprimemeat.ar/zonas/maschwitz/ (Solo Maschwitz)
+```
+
+Cada página tendría:
+- `<title>` específico: "Puertos Prime Meat | Carne en Belén de Escobar"
+- `<meta description>` específica: "Carne premium cuota 481 entregada en Belén de Escobar..."
+- Contenido sobre esa zona específica
+- Schema.org con esa zona en `areaServed`
+
+### E. Google My Business (Imprescindible)
+
+Aunque no es HTML, es crítico para SEO local:
+1. Registra tu negocio en [Google My Business](https://business.google.com)
+2. Agrega ubicación: Escobar, Buenos Aires
+3. Añade fotos de tus cortes
+4. Solicita reseñas de clientes
+5. Mantén horarios actualizados
+
+**Impacto:** Aparecerás en Google Maps y en el "Google Local Pack" (los 3 primeros resultados locales).
