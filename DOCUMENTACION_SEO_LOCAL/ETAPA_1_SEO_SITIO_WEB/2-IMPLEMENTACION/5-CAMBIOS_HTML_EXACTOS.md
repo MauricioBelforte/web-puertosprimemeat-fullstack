@@ -358,12 +358,11 @@ Después de hacer los cambios:
 
 ---
 
-## 🎯 NEXT STEPS
+## 🎯 PRÓXIMOS PASOS
 
 1. ✅ Implementa estos cambios en `index.html`
 2. ✅ Haz commit en Git
 3. ✅ Despliega a producción
 4. ✅ Espera 24-48 horas para que Google reindex
 5. ✅ Chequea en Google Search Console
-6. ✅ Registrate en Google My Business
-
+6. ⏳ **Pasa a Etapa 2:** Una vez que el equipo haya registrado y verificado Google My Business, implementa los cambios de la Etapa 2 para sincronizar la información.

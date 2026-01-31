@@ -1,4 +1,4 @@
-# 🚀 GUÍA RÁPIDA EN 1 PÁGINA
+# 🚀 GUÍA RÁPIDA EN 1 PÁGINA - ETAPA 1
 
 ## Necesitas mejorar SEO LOCAL. Aquí te muestro EXACTAMENTE dónde colocar la información.
 
@@ -251,11 +251,10 @@ Reemplazá COMPLETA:
 
 ## 💬 QUESTIONS?
 Ver archivos:
-- `ESTRATEGIA_SEO_LOCAL.md` - Análisis detallado
-- `CHECKLIST_SEO_LOCAL.md` - Todas las tareas
-- `CAMBIOS_HTML_EXACTOS.md` - Código completo
+- `7-ESTRATEGIA_SEO_LOCAL.md` - Análisis detallado
+- `8-CHECKLIST_SEO_LOCAL.md` - Todas las tareas
+- `5-CAMBIOS_HTML_EXACTOS.md` - Código completo
 
 ---
 
 **¡Adelante! 40 minutos de trabajo = +200% de tráfico local en 3-4 semanas.**
-
