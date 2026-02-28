@@ -412,10 +412,7 @@ button:hover,
     transform: translateY(0);
 }
 
-.seccion-presentacion h2,
-.seccion-presentacion p {
-    /* Quitamos los estilos de animacion individuales para usar la clase .revelar en el HTML */
-}
+
 
 .seccion-presentacion h2 {
     font-family: 'Libre Baskerville', serif;
@@ -714,6 +711,17 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.link-portfolio {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.link-portfolio:hover {
+    opacity: 0.8;
+    text-decoration: none;
 }
 
 /* Redes sociales */

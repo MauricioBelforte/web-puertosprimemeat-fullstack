@@ -9,7 +9,7 @@ Transformar un proyecto puramente "Frontend Estático" en una aplicación "FullS
 ## 🎩 ESTILO DE TRABAJO Y FILOSOFÍA (REGLAS ESTRICTAS)
 
 1. **Idioma y Nomenclatura (CRÍTICO):**
-   - Todo el código (HTML, CSS, JS), así como los nombres de clases y funciones, debe estar **estrictamente en Español**.
+   - Todo el código (HTML, CSS, JS), así como los nombres de constantes,variables, clases y funciones, debe estar **estrictamente en Español**.
    - Usa nombres **muy explícitos y descriptivos**, sin abreviaturas raras.
    - _Ejemplo Incorrecto:_ `fetchData()`, `updateProd(id)`
    - _Ejemplo Correcto:_ `obtenerPreciosDesdeBaseDeDatos()`, `actualizarProductoPorId(identificadorDelProducto)`
