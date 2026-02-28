@@ -713,14 +713,17 @@ footer {
     width: 100%;
 }
 
-.link-portfolio {
-    color: inherit;
+.link-portfolio,
+.link-portfolio:visited,
+.link-portfolio:active {
+    color: var(--color-blanco);
     text-decoration: none;
     transition: opacity 0.3s ease;
 }
 
 .link-portfolio:hover {
     opacity: 0.8;
+    color: var(--color-blanco);
     text-decoration: none;
 }
 
