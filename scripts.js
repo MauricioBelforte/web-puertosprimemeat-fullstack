@@ -49,35 +49,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    // Animación de aparición en scroll para la sección de presentación
-    const seccionPresentacion = document.querySelector('.seccion-presentacion');
-    if (seccionPresentacion) {
-        const observador = new IntersectionObserver((entradas, observadorDeEntradas) => {
-            entradas.forEach(entrada => {
-                if (entrada.isIntersecting) {
-                    const elementosParaAnimar = [
-                        entrada.target.querySelector('h2'),
-                        ...entrada.target.querySelectorAll('p')
-                    ];
+    // --- ANIMACIÓN UNIVERSAL EN SCROLL ---
+    // Este código busca cualquier elemento con la clase "revelar" y lo hace aparecer cuando entra en pantalla
+    const elementosParaRevelar = document.querySelectorAll('.revelar');
 
-                    elementosParaAnimar.forEach((elemento, indice) => {
-                        if (elemento) {
-                            setTimeout(() => {
-                                elemento.classList.add('is-visible');
-                            }, indice * 1000); // 400ms de retraso entre elementos
-                        }
-                    });
+    const observadorUniversal = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada, indice) => {
+            if (entrada.isIntersecting) {
+                // Le damos un pequeño retraso basado en el orden para que la aparición sea escalonada y premium
+                // Pero solo si están cerca uno del otro (como las tarjetas)
+                setTimeout(() => {
+                    entrada.target.classList.add('is-visible');
+                }, 200); // 200ms de base para que sea lento y elegante
 
-                    observadorDeEntradas.unobserve(entrada.target);
-                }
-            });
-        }, {
-            rootMargin: '0px',
-            threshold: 0.5 // Inicia la animación cuando el 20% de la sección es visible
+                // Una vez que ya se mostró, dejamos de observarlo para ahorrar batería/recursos
+                observadorUniversal.unobserve(entrada.target);
+            }
         });
+    }, {
+        threshold: 0.1, // Se activa apenas asoma un 10% del elemento
+        rootMargin: "0px 0px -50px 0px" // Se activa un poquito antes de llegar para que sea fluido
+    });
 
-        observador.observe(seccionPresentacion);
-    }
+    elementosParaRevelar.forEach(el => observadorUniversal.observe(el));
 
     // Animación de desvanecimiento para el texto adornado al hacer scroll
     /*    const textoAdornado = document.querySelector('.texto-adornado');

@@ -36,7 +36,7 @@
     --font-size-xs: 1rem;
     --font-size-sm: 1.25rem;
     --font-size-md: 1.5rem;
-    --font-size-lg: 1.75rem;
+    --font-size-lg: 2rem;
     --font-size-xl: 2.5rem;
     --font-size-xxl: 3.5rem;
     --font-size-xxxl: 5rem;
@@ -399,16 +399,22 @@ button:hover,
     /*   box-shadow: 0px -60px 65px rgba(0, 0, 0, 0.60); */
 }
 
-.seccion-presentacion h2,
-.seccion-presentacion p {
+/* --- EFECTO REVELAR EN SCROLL (Para TEXTOS) --- */
+.revelar {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    will-change: opacity, transform;
 }
 
-.seccion-presentacion .is-visible {
+.revelar.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.seccion-presentacion h2,
+.seccion-presentacion p {
+    /* Quitamos los estilos de animacion individuales para usar la clase .revelar en el HTML */
 }
 
 .seccion-presentacion h2 {
@@ -483,7 +489,55 @@ button:hover,
     width: 100%;
     height: 100%;
     max-width: 25rem;
+
+    /* Animación de entrada suave: Solo definimos el inicio */
+    animation: aparecer-tarjeta 0.8s ease-out;
 }
+
+@keyframes aparecer-tarjeta {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+/* Retraso escalonado para las tarjetas */
+.tarjeta-producto:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.tarjeta-producto:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.tarjeta-producto:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.tarjeta-producto:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.tarjeta-producto:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.tarjeta-producto:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.tarjeta-producto:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.tarjeta-producto:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+/* El @keyframes lo movimos arriba para orden */
+
+/* Retraso escalonado para que no aparezcan todas al mismo tiempo (opcional pero premium) */
+
 
 .tarjeta-producto img,
 .oferta-producto img {
@@ -560,6 +614,33 @@ button:hover,
     text-decoration: none;
     color: var(--color-acento);
     font-size: var(--font-size-xl);
+    transition: color 0.3s ease;
+    /* Transición suave cuando se quita el skeleton */
+}
+
+/* --- ANIMACIÓN SKELETON (Para ocultar el salto de precio) --- */
+.precio-esqueleto {
+    color: transparent !important;
+    /* Oculta el número viejo hasta que cargue */
+    /* Usamos el amarillo de tus cards (#efc355) con variaciones para el brillo */
+    background: linear-gradient(90deg, #efc355 25%, #f3cf6c 50%, #efc355 75%);
+    background-size: 200% 100%;
+    animation: cargar-esqueleto 1.5s infinite;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 120px;
+    min-height: 48px;
+    /* Altura aproximada del precio-xl */
+}
+
+@keyframes cargar-esqueleto {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .separador-card {
@@ -954,7 +1035,7 @@ footer {
     }
 
     .contenedor-hero h1 {
-        font-size: var(--font-size-md);
+        font-size: var(--font-size-lg);
     }
 
     .contenedor-hero .lema-hero {
@@ -979,8 +1060,8 @@ footer {
 
     .texto-adornado {
         position: relative;
-        bottom: auto;
-        margin-top: 10vh;
+        bottom: 1vh;
+        margin-top: 20vh;
         padding: 0 1rem;
     }
 

@@ -1,0 +1,170 @@
+/* Heredamos variables de styles.css, aquí agregamos específicas del admin */
+
+body {
+    background-image: none;
+    background-color: #1a1a1a;
+    /* Fondo oscuro plano para el admin */
+    min-height: 100vh;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.seccion-administrador {
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- LOGIN --- */
+#pantalla-ingreso {
+    justify-content: center;
+}
+
+.contenedor-ingreso {
+    background: var(--color-card);
+    padding: 2rem;
+    border-radius: var(--radio-card);
+    box-shadow: var(--shadow-card);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.logo-administrador img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-negro);
+    font-weight: bold;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-family: var(--fuente-base);
+    font-size: 1rem;
+}
+
+.mensaje-error {
+    color: #d32f2f;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* --- DASHBOARD --- */
+.encabezado-administrador {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-gris);
+}
+
+.boton-cerrar-sesion {
+    background-color: #d32f2f;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.boton-cerrar-sesion:hover {
+    background-color: #b71c1c;
+}
+
+/* --- TARJETAS DE EDICIÓN (Sobrescribiendo styles.css) --- */
+.tarjeta-producto {
+    /* Eliminamos efectos de hover para edición */
+    transform: none !important;
+    box-shadow: 0 2px 8px var(--color-card-shadow) !important;
+    cursor: default;
+}
+
+.tarjeta-producto label {
+    display: block;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+    width: 100%;
+}
+
+.tarjeta-producto h3 {
+    color: #000000 !important;
+}
+
+/* Inputs dentro de las tarjetas */
+.input-edicion {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    font-family: inherit;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.input-edicion.nombre {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.input-edicion.descripcion {
+    font-size: 0.95rem;
+    resize: vertical;
+    min-height: 180px;
+}
+
+.input-edicion.presentacion {
+    font-size: 0.95rem;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-edicion.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    width: 150px;
+    text-align: center;
+}
+
+.boton-guardar {
+    background-color: #000000 !important;
+    color: #efc355 !important;
+    /* Amarillo gold de tu template original */
+    font-weight: bold !important;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.boton-guardar:hover {
+    background-color: #222222 !important;
+    transform: scale(1.02);
+}

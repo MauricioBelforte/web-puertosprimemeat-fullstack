@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Puertos Prime Meat</title>
+
+    <!-- Fuentes (Mismas que la web principal) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="estilo-administrador.css">
+</head>
+
+<body>
+
+    <!-- VISTA DE LOGIN -->
+    <section id="pantalla-ingreso" class="seccion-administrador">
+        <div class="contenedor-ingreso">
+            <div class="logo-administrador">
+                <img src="../imagenes/logo.jpeg" alt="Logo Puertos Prime Meat">
+            </div>
+            <h2>Acceso Administrativo</h2>
+            <form id="formulario-ingreso">
+                <div class="grupo-formulario">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" required placeholder="admin@puertosprimemeat.com">
+                </div>
+                <div class="grupo-formulario">
+                    <label for="contrasenia">Contraseña</label>
+                    <input type="password" id="contrasenia" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="cta-button">Ingresar</button>
+                <p id="error-ingreso" class="mensaje-error"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- VISTA DE DASHBOARD (Oculta por defecto) -->
+    <section id="pantalla-panel" class="seccion-administrador oculto">
+        <header class="encabezado-administrador">
+            <h2>Gestión de Productos</h2>
+            <button id="boton-cerrar-sesion" class="boton-cerrar-sesion">Cerrar Sesión</button>
+        </header>
+
+        <div class="contenedor-tarjetas" id="contenedor-productos">
+            <!-- Aquí se cargarán los productos dinámicamente -->
+            <p class="texto-cargando">Cargando productos...</p>
+        </div>
+    </section>
+
+    <!-- Lógica de la aplicación -->
+    <script type="module" src="aplicacion-administrador.js"></script>
+</body>
+
+</html>

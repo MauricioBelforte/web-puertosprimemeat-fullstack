@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Migración de Datos a Firebase</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 1rem;
+            cursor: pointer;
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #logs {
+            margin-top: 1rem;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background: white;
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        .log-item {
+            padding: 0.2rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .log-item.success {
+            color: green;
+        }
+
+        .log-item.error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Migración de Productos a Firebase</h1>
+    <p>Este script leerá los productos de tu <strong>index.html</strong> y los subirá a la base de datos de Firestore.
+    </p>
+    <button id="start-migration">🚀 Comenzar Migración</button>
+    <div id="logs"></div>
+
+    <script type="module">
+        import { crearOSobreescribirProductoPorId } from './modules/services/servicio-datos.js';
+
+        const startBtn = document.getElementById('start-migration');
+        const logsContainer = document.getElementById('logs');
+
+        function log(message, type = 'info') {
+            logsContainer.innerHTML += `<div class="log-item ${type}">${message}</div>`;
+            logsContainer.scrollTop = logsContainer.scrollHeight;
+        }
+
+        function generateId(name) {
+            return name.toLowerCase()
+                .replace(/ñ/g, 'n')
+                .replace(/ /g, '-')
+                .replace(/[^\w-]+/g, '');
+        }
+
+        startBtn.addEventListener('click', async () => {
+            startBtn.disabled = true;
+            startBtn.textContent = 'Migrando...';
+            log('Iniciando migración...');
+
+            try {
+                const response = await fetch('index.html');
+                const htmlText = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+
+                const tarjetas = doc.querySelectorAll('.tarjeta-producto');
+                log(`Se encontraron ${tarjetas.length} productos en index.html.`);
+
+                for (const tarjeta of tarjetas) {
+                    // Selectores más específicos para evitar errores
+                    const nombreEl = tarjeta.querySelector('h3');
+                    const descripcionEl = tarjeta.querySelector('.contenedor-descripcion p');
+                    const presentacionEl = tarjeta.querySelector('.presentacion-producto');
+                    const precioEl = tarjeta.querySelector('.precio-real');
+
+                    // Verificación para evitar el error si un elemento no se encuentra
+                    if (!nombreEl || !descripcionEl || !precioEl || !presentacionEl) {
+                        const errorMsg = `❌ Error en una tarjeta: no se encontró nombre, descripción, presentación o precio. Saltando...`;
+                        log(errorMsg, 'error');
+                        console.error(errorMsg, tarjeta);
+                        continue; // Pasa a la siguiente tarjeta
+                    }
+
+                    const nombre = nombreEl.textContent.trim();
+                    const descripcion = descripcionEl.textContent.replace(/\s+/g, ' ').trim();
+                    const presentacion = presentacionEl.innerHTML.replace(/\s+/g, ' ').trim(); // uso innerHTML por si tiene saltos de linea como <br>
+                    const precioTexto = precioEl.textContent.trim();
+                    const precio = parseInt(precioTexto.replace(/\$|\.| /g, ''), 10);
+
+                    const id = generateId(nombre);
+                    const productoData = { nombre, descripcion, presentacion, precio };
+
+                    await crearOSobreescribirProductoPorId(id, productoData);
+                    log(`✅ Producto '${nombre}' migrado con ID: ${id}`, 'success');
+                }
+
+                log('🎉 ¡Migración completada con éxito!', 'success');
+                startBtn.textContent = '¡Completado!';
+
+            } catch (error) {
+                console.error(error);
+                log(`❌ Error durante la migración: ${error.message}`, 'error');
+                startBtn.textContent = 'Error';
+            }
+        });
+    </script>
+</body>
+
+</html>
