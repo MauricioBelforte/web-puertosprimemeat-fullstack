@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }, {
-        threshold: 0.1, // Se activa apenas asoma un 10% del elemento
-        rootMargin: "0px 0px -50px 0px" // Se activa un poquito antes de llegar para que sea fluido
+        threshold: 0, // Se activa apenas asoma el primer píxel
+        rootMargin: "0px" // Sin margen de retraso, se activa inmediatamente al entrar
     });
 
     elementosParaRevelar.forEach(el => observadorUniversal.observe(el));

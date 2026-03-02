@@ -410,6 +410,7 @@ button:hover,
 .revelar.is-visible {
     opacity: 1;
     transform: translateY(0);
+
 }
 
 
@@ -482,54 +483,82 @@ button:hover,
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    transition: transform 0.2s, box-shadow 0.2s;
+    /* Hover rápido y fluido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     height: 100%;
     max-width: 25rem;
 
-    /* Animación de entrada suave: Solo definimos el inicio */
-    animation: aparecer-tarjeta 0.8s ease-out;
+    /* La animación se dispara al hacer scroll mediante la clase .revelar */
 }
 
 @keyframes aparecer-tarjeta {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(30px);
     }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Retraso escalonado para las tarjetas */
-.tarjeta-producto:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.tarjeta-producto:nth-child(2) {
+/* Retraso escalonado para los hijos (solo para la animación de entrada) */
+.revelar.is-visible>*:nth-child(1) {
     animation-delay: 0.2s;
 }
 
-.tarjeta-producto:nth-child(3) {
+.revelar.is-visible>*:nth-child(2) {
     animation-delay: 0.3s;
 }
 
-.tarjeta-producto:nth-child(4) {
+.revelar.is-visible>*:nth-child(3) {
     animation-delay: 0.4s;
 }
 
-.tarjeta-producto:nth-child(5) {
+.revelar.is-visible>*:nth-child(4) {
     animation-delay: 0.5s;
 }
 
-.tarjeta-producto:nth-child(6) {
+.revelar.is-visible>*:nth-child(5) {
     animation-delay: 0.6s;
 }
 
-.tarjeta-producto:nth-child(7) {
+.revelar.is-visible>*:nth-child(6) {
     animation-delay: 0.7s;
 }
 
-.tarjeta-producto:nth-child(8) {
+.revelar.is-visible>*:nth-child(7) {
     animation-delay: 0.8s;
 }
+
+.revelar.is-visible>*:nth-child(8) {
+    animation-delay: 0.9s;
+}
+
+/* Estado inicial: ocultos */
+.revelar>* {
+    opacity: 0;
+}
+
+/* Disparamos la animación de entrada (solo corre una vez) */
+.revelar.is-visible>* {
+    animation: aparecer-tarjeta 1.2s ease-out forwards;
+}
+
+/* El Hover ahora es 100% independiente y rápido (sin delays) */
+.tarjeta-producto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 24px var(--color-card-shadow);
+    border-color: var(--color-acento);
+    transition-delay: 0s !important;
+}
+
 
 /* El @keyframes lo movimos arriba para orden */
 
