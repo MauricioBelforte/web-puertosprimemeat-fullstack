@@ -20,6 +20,10 @@ He dividido la explicación en módulos cortos y fáciles de digerir. Te recomie
    _¿El cerebro de la operación?_  
    Entendiendo Firebase, la carpeta `modules/`, la seguridad y cómo guardamos los datos para que no se borren.
 
+5. **[05_Evolucion_Sistema_Hibrido.md](./05_Evolucion_Sistema_Hibrido.md)**  
+   _¿El siguiente nivel?_  
+   Cómo evolucionamos el sistema para que el administrador pueda crear productos nuevos y subir fotos desde el panel, sin tocar código. Incluye Firebase Storage y la estrategia de tarjetas dinámicas.
+
 ---
 
 > **💡 Consejo para estudiar:**

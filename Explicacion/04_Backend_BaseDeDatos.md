@@ -53,6 +53,6 @@ allow write: if request.auth != null; // Traducción: Solo deja ESCRIBIR / BORRA
 
 Por lo tanto, la base de datos sabe si el que envía la petición `actualizarProductoEspecificoPorId()` está logueado en tiempo real. Si no es así, envía un enorme error rojo: "Permiso denegado".
 
-¡Estás súper protegido y este es el funcionamiento general de tu sitio web actualizado que ahora tiene un panel administrador y todo en tiempo real!
+🥳 **¡Felicidades, lograste pasar de un sitio web estático a una aplicación (App Web) real conectada a la nube!**
 
-🥳 **FIN DEL ESTUDIO**. ¡Felicidades, lograste pasar de un sitio web estático a una aplicación (App Web) real conectada a la nube!
+👉 **Siguiente paso:** Si querés llevar tu proyecto al siguiente nivel (crear productos nuevos y subir fotos desde el panel admin), seguí con **[05_Evolucion_Sistema_Hibrido.md](./05_Evolucion_Sistema_Hibrido.md)**.

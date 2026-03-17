@@ -33,6 +33,29 @@ Transformar un proyecto puramente "Frontend Estático" en una aplicación "FullS
 5. **Autonomía del Agente:**
    - El agente informático debe crear las carpetas, archivos, y realizar las inyecciones de código necesarias de forma _completamente autónoma_, respetando esta estrategia punto por punto.
 
+6. **Bitácora de Sesión (MANDATORIO AL CIERRE):**
+   - Cuando el usuario indique que termina la sesión (frases como: "seguimos después", "chau", "me voy", "cortamos acá", "lo dejamos acá", etc.), el agente **DEBE** crear obligatoriamente un archivo de bitácora antes de despedirse.
+   - **Ubicación:** `bitacoras/`
+   - **Nombre del archivo:** `YYYY-MM-DD_resumen_sesion.md` (usando la fecha del día actual).
+   - **Si ya existe un archivo con esa fecha** (porque hubo dos sesiones el mismo día), agregar un sufijo incremental: `YYYY-MM-DD_resumen_sesion_2.md`.
+   - **Estructura obligatoria del archivo:**
+     ```
+     # 📋 Bitácora de Sesión — [FECHA]
+
+     ## ✅ Lo que se logró en esta sesión
+     - (Lista de logros concretos)
+
+     ## 🚧 Bloqueos o pendientes
+     - (Problemas encontrados, decisiones sin tomar)
+
+     ## 👉 Próximo paso exacto para retomar
+     - (Descripción clara y concisa del primer paso que hay que hacer en la próxima sesión)
+
+     ## 📂 Archivos modificados
+     - (Lista de archivos tocados con descripción breve)
+     ```
+   - **El agente NO debe preguntar** si el usuario quiere la bitácora. Debe crearla automáticamente como parte del cierre.
+
 ---
 
 ## 🛠️ ESTRATEGIA DE IMPLEMENTACIÓN (PASO A PASO PARA EL AGENTE)
@@ -95,4 +118,4 @@ Transformar un proyecto puramente "Frontend Estático" en una aplicación "FullS
 
 ---
 
-🚀 **NOTA FINAL PARA EL AGENTE:** Si un usuario te solicita _"Implementar la estrategia del archivo agents.md para este proyecto"_, asume tu rol sin hacer preguntas obvias y ejecuta estas 5 Fases implementando el código de una.
+🚀 **NOTA FINAL PARA EL AGENTE:** Si un usuario te solicita _"Implementar la estrategia del archivo agents.md para este proyecto"_, asume tu rol sin hacer preguntas obvias y ejecuta estas 5 Fases implementando el código de una. Y recordá: **al finalizar cada sesión, dejá la bitácora en `bitacoras/` sin que te lo pidan.**

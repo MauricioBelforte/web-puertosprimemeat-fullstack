@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8">
@@ -8,22 +8,22 @@
 
     <!-- CONFIGURACIÓN DE ROBOTS PARA DESARROLLO Y PRODUCCIÓN -->
     <!-- Desplegada en Github (Bloquea a Google) -->
-    <meta name="robots" content="noindex, nofollow">
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- Desplegada en Hosting Oficial (Permite a Google) - DESCOMENTAR AL SUBIR -->
-    <!-- <meta name="robots" content="index, follow"> -->
+    <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://puertosprimemeat.ar/">
     <meta name="description"
-        content="Puertos Prime Meat te acerca carne de calidad exportación (Cuota 481). Descubrí cortes seleccionados con trazabilidad, sabor y terneza superior para tu asado gourmet.">
+        content="Puertos Prime Meat - Carne premium cuota 481 en Belén de Escobar (cabecera), Puertos (Ciudad-Pueblo: Araucarias, Acacias, Vistas, Riberas, Muelles, Nativas, Orillas, Ceibos, Marinas, Amarras), Ingeniero Maschwitz, San Matías, El Cantón, El Naudí, El Cazador. Trazabilidad y sabor superior.">
     <meta name="keywords"
-        content="carne cuota 481, carnicería premium, cortes de carne premium, asado de tira, ojo de bife, entraña, vacío, carne de exportación, carne para asado, carnicería en Puertos, carne envasada al vacío, asado gourmet">
+        content="carne cuota 481 Escobar, carnicería premium Belén de Escobar, carne premium Puertos (Ciudad-Pueblo), carne Araucarias, carne Acacias, carne Vistas, carne Puertos del Lago, cortes carne Maschwitz, carne San Matías, carne El Cantón, carne El Naudí, carne El Cazador, asado de tira Escobar, ojo de bife Escobar, vacío Escobar, entraña cuota 481, carne de exportación Escobar, carnicería Escobar, carne envasada al vacío, asado gourmet">
     <meta name="author" content="Puertos Prime Meat">
 
     <!-- OPEN GRAPH (PARA REDES SOCIALES COMO FACEBOOK, WHATSAPP) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Puertos Prime Meat | Carne Premium de Exportación (Cuota 481)">
+    <meta property="og:title" content="Puertos Prime Meat | Carne Premium en Belén de Escobar y Puertos del Lago">
     <meta property="og:description"
-        content="Descubrí carne de calidad exportación (Cuota 481) con trazabilidad, sabor y terneza superior para tu asado gourmet.">
+        content="Carne premium cuota 481 entregada en Escobar, Puertos del Lago, Maschwitz y zona norte. Cortes selectos para tu asado gourmet.">
     <meta property="og:image" content="https://puertosprimemeat.ar/imagenes/logo.jpeg">
     <meta property="og:url" content="https://puertosprimemeat.ar/">
 
@@ -45,7 +45,23 @@
         rel="stylesheet">
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Puertos Prime Meat | Carne Premium de Exportación (Cuota 481)</title>
+    <title>Puertos Prime Meat | Carne Cuota 481 en Escobar</title>
+    
+    <!-- Clase para esconder texto visualmente pero mantenerlo para Google (SEO) -->
+    <style>
+        .solo-para-google { 
+            position: absolute; 
+            width: 1px; 
+            height: 1px; 
+            padding: 0; 
+            margin: -1px; 
+            overflow: hidden; 
+            clip: rect(0, 0, 0, 0); 
+            white-space: nowrap; 
+            border-width: 0; 
+        }
+    </style>
+    
     <link rel="stylesheet" href="styles.css">
 
     <!-- DATOS ESTRUCTURADOS (SCHEMA.ORG) -->
@@ -57,9 +73,37 @@
       "image": "https://puertosprimemeat.ar/imagenes/logo.jpeg",
       "url": "https://puertosprimemeat.ar/",
       "telephone": "+5493484568338",
-      "description": "Puertos Prime Meat te acerca carne de calidad exportación (Cuota 481). Descubrí cortes seleccionados con trazabilidad, sabor y terneza superior.",
+      "description": "Puertos Prime Meat - Carne premium cuota 481 en Escobar",
       "priceRange": "$$$",
-      "areaServed": "Puertos del Lago, Escobar"
+      "areaServed": [
+        "Belén de Escobar",
+        "Puertos del Lago",
+        "Ingeniero Maschwitz",
+        "San Matías",
+        "El Cantón",
+        "El Naudí",
+        "El Cazador",
+        "Araucarias",
+        "Acacias",
+        "Vistas",
+        "Riberas",
+        "Muelles",
+        "Nativas",
+        "Orillas",
+        "Ceibos",
+        "Marinas",
+        "Amarras",
+        "Escobar",
+        "Buenos Aires"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Puertos del Lago",
+        "addressLocality": "Escobar",
+        "addressRegion": "Buenos Aires",
+        "postalCode": "1625",
+        "addressCountry": "AR"
+      }
     }
     </script>
 </head>
@@ -68,7 +112,10 @@
     <header>
         <nav class="barra-navegacion">
             <div class="logo">
-                <img src="imagenes/logo.jpeg" alt="Logo de Puertos Prime Meat" width="168" height="168" />
+                <picture>
+                    <source srcset="imagenes/logo.webp" type="image/webp">
+                    <img src="imagenes/logo.jpeg" alt="Logo de Puertos Prime Meat - Carnicería premium en Escobar" width="168" height="168" />
+                </picture>
 
             </div>
             <!--             <div class="botones-navegacion">
@@ -82,7 +129,7 @@
     <main>
         <section class="seccion-hero">
             <div class="contenedor-hero">
-                <h1 class="libre-baskerville">PUERTOS PRIME MEAT</h1>
+                <h1 class="libre-baskerville">PUERTOS PRIME MEAT<span class="solo-para-google"> - Carne Premium Cuota 481 en Belén de Escobar y Puertos del Lago</span></h1>
                 <p class="libre-baskerville">Carne de calidad exportación, para quienes saben elegir.</p>
                 <div class="contenedor-botones">
                     <a href="#productos" class="cta-button">Ver productos</a>
@@ -130,17 +177,21 @@
                 excepcional, envasada al vacío para conservar su calidad original.</p>
             <p class="revelar">Una experiencia de asado gourmet, con origen controlado y presentación de nivel
                 internacional.</p>
+            <p class="solo-para-google">Operamos en Belén de Escobar, Puertos del Lago, Ingeniero Maschwitz y barrios como San Matías, El Cantón, El Naudí, El Cazador, Araucarias, Acacias, Vistas, Riberas, Muelles, Nativas, Orillas, Ceibos, Marinas y Amarras. Carne de exportación entregada en tu zona de Escobar.</p>
             <!--   <a href="#" class="cta-button">Comprar productos</a> -->
         </section>
 
         <!-- Sección de Cards -->
         <section class="seccion-productos" id="productos">
-            <h2 class="revelar">CORTES PUERTOS PRIME MEAT</h2>
+            <h2 class="revelar">CORTES PUERTOS PRIME MEAT<span class="solo-para-google"> Premium Cuota 481 en Escobar</span></h2>
             <div class="contenedor-tarjetas revelar">
                 <article class="tarjeta-producto">
-                    <img src="imagenes/cortes/asado-tiras-seleccion.jpg"
-                        alt="Corte de asado de tira premium de Puertos Prime Meat" width="400" height="240"
-                        loading="lazy">
+                    <picture>
+                        <source srcset="imagenes/cortes/asado-tiras-seleccion.webp" type="image/webp">
+                        <img src="imagenes/cortes/asado-tiras-seleccion.jpg"
+                            alt="Asado de tira premium cuota 481 - Puertos Prime Meat Escobar" width="400" height="240"
+                            loading="lazy">
+                    </picture>
                     <h3>ASADO DE TIRA – SELECCIÓN CUOTA 481</h3>
                     <div class="info-producto">
                         <div class="contenedor-descripcion">
@@ -161,9 +212,12 @@
                     </div>
                 </article>
                 <article class="tarjeta-producto">
-                    <img src="imagenes/cortes/medialuna-de-vacio.jpg"
-                        alt="Corte de medialuna de vacío premium de Puertos Prime Meat" width="400" height="240"
-                        loading="lazy">
+                    <picture>
+                        <source srcset="imagenes/cortes/medialuna-de-vacio.webp" type="image/webp">
+                        <img src="imagenes/cortes/medialuna-de-vacio.jpg"
+                            alt="Medialuna de vacío cuota 481 - Puertos Prime Meat Escobar" width="400" height="240"
+                            loading="lazy">
+                    </picture>
                     <h3>MEDIALUNA DE VACÍO – SELECCIÓN CUOTA 481</h3>
                     <div class="info-producto">
                         <div class="contenedor-descripcion">
@@ -184,9 +238,12 @@
                     </div>
                 </article>
                 <article class="tarjeta-producto">
-                    <img src="imagenes/cortes/bife-de-vacio.jpg"
-                        alt="Corte de bife de vacío premium de Puertos Prime Meat" width="400" height="240"
-                        loading="lazy">
+                    <picture>
+                        <source srcset="imagenes/cortes/bife-de-vacio.webp" type="image/webp">
+                        <img src="imagenes/cortes/bife-de-vacio.jpg"
+                            alt="Bife de vacío cuota 481 - Puertos Prime Meat Escobar" width="400" height="240"
+                            loading="lazy">
+                    </picture>
                     <h3>BIFE DE VACÍO – SELECCIÓN CUOTA 481</h3>
                     <div class="info-producto">
                         <div class="contenedor-descripcion">
@@ -208,8 +265,12 @@
                     </div>
                 </article>
                 <article class="tarjeta-producto">
-                    <img src="imagenes/cortes/entrana-seleccion.jpg"
-                        alt="Corte de entraña premium de Puertos Prime Meat" width="400" height="240" loading="lazy">
+                    <picture>
+                        <source srcset="imagenes/cortes/entrana-seleccion.webp" type="image/webp">
+                        <img src="imagenes/cortes/entrana-seleccion.jpg"
+                            alt="Entraña premium cuota 481 - Puertos Prime Meat Escobar" width="400" height="240"
+                            loading="lazy">
+                    </picture>
                     <h3>ENTRAÑA – SELECCIÓN CUOTA 481</h3>
                     <div class="info-producto">
                         <div class="contenedor-descripcion">
@@ -229,9 +290,12 @@
                     </div>
                 </article>
                 <article class="tarjeta-producto">
-                    <img src="imagenes/cortes/asado-del-centro-seleccion-(asado-emperador).png"
-                        alt="Corte de asado de centro (emperador) premium de Puertos Prime Meat" width="400"
-                        height="240" loading="lazy">
+                    <picture>
+                        <source srcset="imagenes/cortes/asado-del-centro-seleccion-(asado-emperador).webp" type="image/webp">
+                        <img src="imagenes/cortes/asado-del-centro-seleccion-(asado-emperador).png"
+                            alt="Asado de centro emperador cuota 481 - Puertos Prime Meat Escobar" width="400"
+                            height="240" loading="lazy">
+                    </picture>
                     <h3>ASADO DE CENTRO – SELECCIÓN</h3>
                     <div class="info-producto">
                         <div class="contenedor-descripcion">
@@ -253,8 +317,11 @@
                     </div>
                 </article>
                 <article class="tarjeta-producto">
-                    <img src="imagenes/cortes/ojo-de-bife.jpg" alt="Corte de ojo de bife premium de Puertos Prime Meat"
-                        width="400" height="240" loading="lazy">
+                    <picture>
+                        <source srcset="imagenes/cortes/ojo-de-bife.webp" type="image/webp">
+                        <img src="imagenes/cortes/ojo-de-bife.jpg" alt="Ojo de bife cuota 481 - Puertos Prime Meat Escobar"
+                            width="400" height="240" loading="lazy">
+                    </picture>
                     <h3>OJO DE BIFE – SELECCIÓN CUOTA 481</h3>
                     <div class="info-producto">
                         <div class="contenedor-descripcion">
@@ -275,9 +342,12 @@
                     </div>
                 </article>
                 <article class="tarjeta-producto">
-                    <img src="imagenes/cortes/rack-ojo-de-bife.jpg"
-                        alt="Corte de rack de ojo de bife premium de Puertos Prime Meat" width="400" height="240"
-                        loading="lazy">
+                    <picture>
+                        <source srcset="imagenes/cortes/rack-ojo-de-bife.webp" type="image/webp">
+                        <img src="imagenes/cortes/rack-ojo-de-bife.jpg"
+                            alt="Rack de ojo de bife cuota 481 - Puertos Prime Meat Escobar" width="400" height="240"
+                            loading="lazy">
+                    </picture>
                     <h3>RACK DE OJO DE BIFE – SELECCIÓN CUOTA 481</h3>
                     <div class="info-producto">
                         <div class="contenedor-descripcion">
@@ -299,8 +369,11 @@
                     </div>
                 </article>
                 <article class="tarjeta-producto">
-                    <img src="imagenes/cortes/vacio-seleccion.png" alt="Corte de vacío premium de Puertos Prime Meat"
-                        width="400" height="240" loading="lazy">
+                    <picture>
+                        <source srcset="imagenes/cortes/vacio-seleccion.webp" type="image/webp">
+                        <img src="imagenes/cortes/vacio-seleccion.png" alt="Vacío premium cuota 481 - Puertos Prime Meat Escobar"
+                            width="400" height="240" loading="lazy">
+                    </picture>
                     <h3>VACÍO – SELECCIÓN CUOTA 481</h3>
                     <div class="info-producto">
                         <div class="contenedor-descripcion">
@@ -364,8 +437,12 @@
         <!-- Se movieron las imágenes a las secciones de productos y ofertas; galería eliminada -->
 
         <section class="seccion-contacto">
-            <h2>Contactanos</h2>
+            <h2>Contactanos<span class="solo-para-google"> - Servicio en Escobar y Zona Norte</span></h2>
             <p>Si tenés alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
+            <div class="solo-para-google">
+                <p>Puertos Prime Meat atiende en: Belén de Escobar, Puertos del Lago, Ingeniero Maschwitz.</p>
+                <p>También en los barrios: San Matías, El Cantón, El Naudí, El Cazador, Araucarias, Acacias, Vistas, Riberas, Muelles, Nativas, Orillas, Ceibos, Marinas, Amarras.</p>
+            </div>
         </section>
 
         <section class="seccion-redes">
@@ -401,6 +478,11 @@
     </main>
 
     <footer>
+        <div class="solo-para-google">
+            <p>Puertos Prime Meat - Carne Premium Cuota 481</p>
+            <p>Escobar, Buenos Aires (Puertos del Lago, Belén de Escobar, Maschwitz y alrededores)</p>
+            <p>WhatsApp: +54 9 3484-568338</p>
+        </div>
         <p>&copy; Design by <a href="https://mauriciobelforte.github.io/mi-portfolio/" target="_blank" rel="noopener"
                 class="link-portfolio">Mauricio Belforte</a> || Copyright ©2025 todos los derechos reservados</p>
     </footer>

@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /modules/
+Disallow: /Explicacion/
+Disallow: /bitacoras/
+Disallow: /documentacion/
+Disallow: /FUTURAS_MEJORAS/
+
 Sitemap: https://puertosprimemeat.ar/sitemap.xml
